@@ -1,5 +1,5 @@
-import { TaskStatus } from "../task.model";
+import { TaskStatus } from '../task.model';
 
 export class UpdateTasStatuskDto {
-    status: TaskStatus
+  status: TaskStatus;
 }
