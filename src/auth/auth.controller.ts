@@ -7,13 +7,12 @@ import {
   Req,
 } from '@nestjs/common';
 import { AuthCredentialsDto } from './dto/auth-credentials.dto';
-import { ApiTags, ApiSecurity, ApiHeader } from '@nestjs/swagger';
+import { ApiTags, ApiBearerAuth, ApiHeader } from '@nestjs/swagger';
 import { AuthService } from './auth.service';
 import { AuthGuard } from '@nestjs/passport';
 import { RequestBodyObject } from '@nestjs/swagger/dist/interfaces/open-api-spec.interface';
 
 @ApiTags('auth')
-@ApiSecurity('Authorisation')
 @Controller('auth')
 export class AuthController {
   constructor(private authservice: AuthService) {}
@@ -33,7 +32,7 @@ export class AuthController {
   }
 
   @Post('/test')
-  @ApiHeader({ name: 'Authorisation' })
+  @ApiBearerAuth()
   @UseGuards(AuthGuard())
   test(@Req() req: RequestBodyObject): void {
     console.log(req);
