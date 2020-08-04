@@ -7,7 +7,7 @@ import {
   Req,
 } from '@nestjs/common';
 import { AuthCredentialsDto } from './dto/auth-credentials.dto';
-import { ApiTags, ApiBearerAuth, ApiHeader } from '@nestjs/swagger';
+import { ApiTags, ApiBearerAuth } from '@nestjs/swagger';
 import { AuthService } from './auth.service';
 import { AuthGuard } from '@nestjs/passport';
 import { RequestBodyObject } from '@nestjs/swagger/dist/interfaces/open-api-spec.interface';
