@@ -1,0 +1,14 @@
+{
+  "name": "source",
+  "config": {
+    "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+    "connection.url": "jdbc:postgresql://postgres/taskmanagement",
+    "connection.user": "postgres",
+    "connection.password": "postgres",
+    "table.whitelist": "user, task",
+    "dialect.name": "PostgreSqlDatabaseDialect",
+    "mode": "incrementing",
+    "incrementing.column.name": "id",
+    "topic.prefix": "postgres-test-"
+  }
+}

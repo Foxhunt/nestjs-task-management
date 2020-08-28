@@ -1,0 +1,13 @@
+{
+  "name": "sink",
+  "config": {
+    "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+    "topics": "postgres-test-task, postgres-test-user",
+    "connection.url": "jdbc:postgresql://postgres/taskmanagement",
+    "connection.user": "postgres",
+    "connection.password": "postgres",
+    "dialect.name": "PostgreSqlDatabaseDialect",
+    "pk.mode": "record_value",
+    "pk.fields": "id"
+  }
+}

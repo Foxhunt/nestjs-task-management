@@ -1,0 +1,14 @@
+{
+  "name": "CleanUserSink",
+  "config": {
+    "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+    "topics": "CLEAN_USER",
+    "connection.url": "jdbc:postgresql://postgres/taskmanagement",
+    "connection.user": "postgres",
+    "connection.password": "postgres",
+    "dialect.name": "PostgreSqlDatabaseDialect",
+    "pk.mode": "record_value",
+    "pk.fields": "ID",
+    "auto.create": "true"
+  }
+}
