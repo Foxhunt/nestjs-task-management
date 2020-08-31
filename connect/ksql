@@ -1,3 +1,6 @@
 Create stream via ui POSTGRES_TEST_USER only select user + id
 
 CREATE STREAM CLEAN_USER AS SELECT * FROM POSTGRES_TEST_USER;
+
+https://docs.ksqldb.io/en/latest/
+https://docs.ksqldb.io/en/latest/developer-guide/

@@ -8,6 +8,7 @@
     "connection.password": "postgres",
     "dialect.name": "PostgreSqlDatabaseDialect",
     "pk.mode": "record_value",
-    "pk.fields": "id"
+    "pk.fields": "id",
+    "auto.create": "true"
   }
 }
